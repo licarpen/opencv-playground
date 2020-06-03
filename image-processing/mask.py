@@ -29,6 +29,7 @@ bk = cv2.bitwise_or(white_background, white_background, mask=mask_inv)
 # bring back color
 fg = cv2.bitwise_or(img2, img2, mask=mask_inv)
 
+# mask is now content + black background
 # blend roi with mask
 final_roi = cv2.bitwise_or(roi, fg)
 
